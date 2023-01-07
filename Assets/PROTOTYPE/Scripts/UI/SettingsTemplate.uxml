@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="MainMenuStyles.uss" />
+    <ui:Button text="Settings A" display-tooltip-when-elided="true" name="ButtonSettingsA" class="main-menu-button main-menu-button-upper" />
+    <ui:Button text="Settings B" display-tooltip-when-elided="true" name="ButtonSettingsB" class="main-menu-button" />
+    <ui:Button text="Settings C" display-tooltip-when-elided="true" name="ButtonSettingsC" class="main-menu-button" />
+    <ui:Button text="Back" display-tooltip-when-elided="true" name="ButtonBackToMainMenu" class="main-menu-button main-menu-button-lower" />
+</ui:UXML>
