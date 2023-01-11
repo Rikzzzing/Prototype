@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 
 public class InputCharacter : MonoBehaviour
 {
-    private IControlable _controlable;
+    private IMovable _movable;
+    private IJumpable _jumpable;
     private GameAction _gameAction;
 
     private void Awake()
@@ -13,24 +14,30 @@ public class InputCharacter : MonoBehaviour
         {
             _gameAction = new GameAction();
         }
-        _gameAction.Enable();
 
-        _controlable = GetComponent<IControlable>();
+        _movable = GetComponent<IMovable>();
+        _jumpable= GetComponent<IJumpable>();
 
-        if (_controlable == null)
+        if (_movable == null)
         {
-            throw new Exception($"There is no IControlable on the object: {gameObject.name}");
+            throw new Exception($"There is no IMovable on the object: {gameObject.name}");
+        }
+
+        if (_jumpable == null)
+        {
+            throw new Exception($"There is no IJumpable on the object: {gameObject.name}");
         }
     }
 
     private void OnEnable()
     {
+        _gameAction.Enable();
         _gameAction.Gameplay.Jump.performed += OnJumpPerfermed;
     }
 
     private void OnJumpPerfermed(InputAction.CallbackContext obj)
     {
-        _controlable.Jump();
+        _jumpable.Jump();
     }
 
     private void Update()
@@ -43,7 +50,7 @@ public class InputCharacter : MonoBehaviour
         var inputDirection = _gameAction.Gameplay.Movement.ReadValue<Vector2>();
         var direction = new Vector3(inputDirection.x, 0f, inputDirection.y);
 
-        _controlable.Move(direction);
+        _movable.Move(direction);
     }
 
     private void OnDisable()

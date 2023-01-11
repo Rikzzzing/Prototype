@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public interface IControlable
+public interface IMovable
 {
     void Move(Vector3 direction);
-    void Jump();
 }

@@ -1,11 +1,11 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class MainCharacter : MonoBehaviour, IControlable
+public class MainCharacter : MonoBehaviour, IMovable, IJumpable
 {
     [SerializeField] private float _speed = 10f;
     [SerializeField] private float _gravity = -9.8f;
-    [SerializeField] private float _jumpHeight = 3f;
+    [SerializeField] private float _jumpHeight = 2f;
     [SerializeField] private float _checkGroundRadius = 0.2f;
     [SerializeField] private LayerMask _groundMask;
     [SerializeField] private Transform _groundCheckerPivot;
@@ -39,14 +39,20 @@ public class MainCharacter : MonoBehaviour, IControlable
         return result;
     }
 
-    public void Move(Vector3 direction)
-    {
-        _moveDirection = direction;
-    }
-
     private void MoveInternal()
     {
         _controller.Move(_moveDirection * _speed * Time.fixedDeltaTime);
+    }
+
+    private void DoGravity()
+    {
+        _velocity += _gravity * Time.fixedDeltaTime;
+        _controller.Move(Vector3.up * _velocity * Time.fixedDeltaTime);
+    }
+
+    public void Move(Vector3 direction)
+    {
+        _moveDirection = direction;
     }
 
     public void Jump()
@@ -55,11 +61,5 @@ public class MainCharacter : MonoBehaviour, IControlable
         {
             _velocity = Mathf.Sqrt(_jumpHeight * -2 * _gravity);
         }
-    }
-
-    private void DoGravity()
-    {
-        _velocity += _gravity * Time.fixedDeltaTime;
-        _controller.Move(Vector3.up * _velocity * Time.fixedDeltaTime);
     }
 }
