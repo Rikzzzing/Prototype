@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class MainMenuController : MonoBehaviour
 {
-    private UIDocument _doc;
+    /*private UIDocument _doc;
 
     private Button _buttonNewGame;
     private Button _buttonContinueGame;
@@ -74,5 +74,5 @@ public class MainMenuController : MonoBehaviour
     private void ButtonExitClicked()
     {
         Application.Quit();
-    }
+    }*/
 }

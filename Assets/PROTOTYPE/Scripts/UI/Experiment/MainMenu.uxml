@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="MenuStyles.uss" />
+    <Style src="project://database/Assets/PROTOTYPE/Scripts/UI/Experiment/MenuStyles.uss?fileID=7433441132597879392&amp;guid=58e1d08ae4b0b3147a86850736e0b0cf&amp;type=3#MenuStyles" />
     <ui:VisualElement name="MenuBackground" class="left-sction">
-        <ui:VisualElement name="Logo" class="logo" />
+        <ui:VisualElement name="Logo" class="logo" style="background-image: none;" />
         <ui:VisualElement />
     </ui:VisualElement>
 </ui:UXML>
