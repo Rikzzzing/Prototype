@@ -32,7 +32,7 @@ public class InputCharacter : MonoBehaviour
     private void OnEnable()
     {
         _gameAction.Enable();
-        _gameAction.Gameplay.Jump.performed += OnJumpPerfermed;
+        _gameAction.Player.Jump.performed += OnJumpPerfermed;
     }
 
     private void OnJumpPerfermed(InputAction.CallbackContext obj)
@@ -47,7 +47,7 @@ public class InputCharacter : MonoBehaviour
 
     private void ReadMovement()
     {
-        var inputDirection = _gameAction.Gameplay.Movement.ReadValue<Vector2>();
+        var inputDirection = _gameAction.Player.Move.ReadValue<Vector2>();
         var direction = new Vector3(inputDirection.x, 0f, inputDirection.y);
 
         _movable.Move(direction);
@@ -55,7 +55,7 @@ public class InputCharacter : MonoBehaviour
 
     private void OnDisable()
     {
-        _gameAction.Gameplay.Jump.performed -= OnJumpPerfermed;
+        _gameAction.Player.Jump.performed -= OnJumpPerfermed;
         _gameAction.Disable();
     }
 }

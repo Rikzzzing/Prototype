@@ -2,11 +2,11 @@
     "name": "GameAction",
     "maps": [
         {
-            "name": "Gameplay",
+            "name": "Player",
             "id": "4f2d1d4c-8cdb-44f9-86b6-4f3b9dc1f3e2",
             "actions": [
                 {
-                    "name": "Movement",
+                    "name": "Move",
                     "type": "Value",
                     "id": "694220a2-1912-465c-a12f-5bc76e049797",
                     "expectedControlType": "Vector2",
@@ -15,27 +15,18 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Sprint",
+                    "type": "Button",
+                    "id": "90c8e65f-e5be-41dd-9252-015645fb26ff",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "3111f3a5-f9ac-4af4-832b-132f9178f787",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Shoot",
-                    "type": "Button",
-                    "id": "be3c91a7-31c4-4346-a2d7-9bd273799e89",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Reload",
-                    "type": "Button",
-                    "id": "48be6c87-b51a-49e0-8e72-49363eff2852",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -67,6 +58,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Aim",
+                    "type": "Button",
+                    "id": "2f2ea10b-d991-4ad8-b529-3006fa21cee2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "be3c91a7-31c4-4346-a2d7-9bd273799e89",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reload",
+                    "type": "Button",
+                    "id": "48be6c87-b51a-49e0-8e72-49363eff2852",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -88,7 +106,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "Move",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -99,7 +117,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse&Keyboard",
-                    "action": "Movement",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -110,7 +128,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse&Keyboard",
-                    "action": "Movement",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -121,7 +139,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse&Keyboard",
-                    "action": "Movement",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -132,7 +150,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse&Keyboard",
-                    "action": "Movement",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -143,7 +161,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "Move",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -154,7 +172,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Movement",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -165,7 +183,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Movement",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -176,7 +194,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Movement",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -187,31 +205,9 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Movement",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "7add3191-9320-48c6-ac0a-2c3e33a00ec3",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Mouse&Keyboard",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8bd606b2-431f-4779-9f63-50b7e5f99d65",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Mouse&Keyboard",
-                    "action": "Reload",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
@@ -243,6 +239,50 @@
                     "processors": "",
                     "groups": "Mouse&Keyboard",
                     "action": "OpenInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "01c69e4b-2383-4792-9daa-bcc599f37e06",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse&Keyboard",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7add3191-9320-48c6-ac0a-2c3e33a00ec3",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse&Keyboard",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8bd606b2-431f-4779-9f63-50b7e5f99d65",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse&Keyboard",
+                    "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc97b48a-64fa-4b1e-9684-e96450811326",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse&Keyboard",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -24,11 +24,11 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
     ""name"": ""GameAction"",
     ""maps"": [
         {
-            ""name"": ""Gameplay"",
+            ""name"": ""Player"",
             ""id"": ""4f2d1d4c-8cdb-44f9-86b6-4f3b9dc1f3e2"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""Move"",
                     ""type"": ""Value"",
                     ""id"": ""694220a2-1912-465c-a12f-5bc76e049797"",
                     ""expectedControlType"": ""Vector2"",
@@ -37,27 +37,18 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""Sprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""90c8e65f-e5be-41dd-9252-015645fb26ff"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""3111f3a5-f9ac-4af4-832b-132f9178f787"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Shoot"",
-                    ""type"": ""Button"",
-                    ""id"": ""be3c91a7-31c4-4346-a2d7-9bd273799e89"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Reload"",
-                    ""type"": ""Button"",
-                    ""id"": ""48be6c87-b51a-49e0-8e72-49363eff2852"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -89,6 +80,33 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""Button"",
+                    ""id"": ""2f2ea10b-d991-4ad8-b529-3006fa21cee2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""be3c91a7-31c4-4346-a2d7-9bd273799e89"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""48be6c87-b51a-49e0-8e72-49363eff2852"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -110,7 +128,7 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -121,7 +139,7 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse&Keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -132,7 +150,7 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse&Keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -143,7 +161,7 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse&Keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -154,7 +172,7 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse&Keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -165,7 +183,7 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -176,7 +194,7 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -187,7 +205,7 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -198,7 +216,7 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -209,31 +227,9 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7add3191-9320-48c6-ac0a-2c3e33a00ec3"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse&Keyboard"",
-                    ""action"": ""Shoot"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8bd606b2-431f-4779-9f63-50b7e5f99d65"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse&Keyboard"",
-                    ""action"": ""Reload"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
@@ -265,6 +261,50 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Mouse&Keyboard"",
                     ""action"": ""OpenInventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""01c69e4b-2383-4792-9daa-bcc599f37e06"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse&Keyboard"",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7add3191-9320-48c6-ac0a-2c3e33a00ec3"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse&Keyboard"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8bd606b2-431f-4779-9f63-50b7e5f99d65"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse&Keyboard"",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dc97b48a-64fa-4b1e-9684-e96450811326"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse&Keyboard"",
+                    ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -329,15 +369,17 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
         }
     ]
 }");
-        // Gameplay
-        m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
-        m_Gameplay_Movement = m_Gameplay.FindAction("Movement", throwIfNotFound: true);
-        m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
-        m_Gameplay_Shoot = m_Gameplay.FindAction("Shoot", throwIfNotFound: true);
-        m_Gameplay_Reload = m_Gameplay.FindAction("Reload", throwIfNotFound: true);
-        m_Gameplay_OpenMap = m_Gameplay.FindAction("OpenMap", throwIfNotFound: true);
-        m_Gameplay_OpenDiary = m_Gameplay.FindAction("OpenDiary", throwIfNotFound: true);
-        m_Gameplay_OpenInventory = m_Gameplay.FindAction("OpenInventory", throwIfNotFound: true);
+        // Player
+        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+        m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
+        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_OpenMap = m_Player.FindAction("OpenMap", throwIfNotFound: true);
+        m_Player_OpenDiary = m_Player.FindAction("OpenDiary", throwIfNotFound: true);
+        m_Player_OpenInventory = m_Player.FindAction("OpenInventory", throwIfNotFound: true);
+        m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
+        m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
+        m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
@@ -397,73 +439,80 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Gameplay
-    private readonly InputActionMap m_Gameplay;
-    private IGameplayActions m_GameplayActionsCallbackInterface;
-    private readonly InputAction m_Gameplay_Movement;
-    private readonly InputAction m_Gameplay_Jump;
-    private readonly InputAction m_Gameplay_Shoot;
-    private readonly InputAction m_Gameplay_Reload;
-    private readonly InputAction m_Gameplay_OpenMap;
-    private readonly InputAction m_Gameplay_OpenDiary;
-    private readonly InputAction m_Gameplay_OpenInventory;
-    public struct GameplayActions
+    // Player
+    private readonly InputActionMap m_Player;
+    private IPlayerActions m_PlayerActionsCallbackInterface;
+    private readonly InputAction m_Player_Move;
+    private readonly InputAction m_Player_Sprint;
+    private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_OpenMap;
+    private readonly InputAction m_Player_OpenDiary;
+    private readonly InputAction m_Player_OpenInventory;
+    private readonly InputAction m_Player_Aim;
+    private readonly InputAction m_Player_Shoot;
+    private readonly InputAction m_Player_Reload;
+    public struct PlayerActions
     {
         private @GameAction m_Wrapper;
-        public GameplayActions(@GameAction wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Gameplay_Movement;
-        public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
-        public InputAction @Shoot => m_Wrapper.m_Gameplay_Shoot;
-        public InputAction @Reload => m_Wrapper.m_Gameplay_Reload;
-        public InputAction @OpenMap => m_Wrapper.m_Gameplay_OpenMap;
-        public InputAction @OpenDiary => m_Wrapper.m_Gameplay_OpenDiary;
-        public InputAction @OpenInventory => m_Wrapper.m_Gameplay_OpenInventory;
-        public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
+        public PlayerActions(@GameAction wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Player_Move;
+        public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
+        public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @OpenMap => m_Wrapper.m_Player_OpenMap;
+        public InputAction @OpenDiary => m_Wrapper.m_Player_OpenDiary;
+        public InputAction @OpenInventory => m_Wrapper.m_Player_OpenInventory;
+        public InputAction @Aim => m_Wrapper.m_Player_Aim;
+        public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
+        public InputAction @Reload => m_Wrapper.m_Player_Reload;
+        public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(GameplayActions set) { return set.Get(); }
-        public void SetCallbacks(IGameplayActions instance)
+        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerActions instance)
         {
-            if (m_Wrapper.m_GameplayActionsCallbackInterface != null)
+            if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMovement;
-                @Jump.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnJump;
-                @Shoot.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShoot;
-                @Shoot.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShoot;
-                @Shoot.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShoot;
-                @Reload.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
-                @Reload.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
-                @Reload.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
-                @OpenMap.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenMap;
-                @OpenMap.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenMap;
-                @OpenMap.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenMap;
-                @OpenDiary.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenDiary;
-                @OpenDiary.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenDiary;
-                @OpenDiary.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenDiary;
-                @OpenInventory.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenInventory;
-                @OpenInventory.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenInventory;
-                @OpenInventory.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenInventory;
+                @Move.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                @Sprint.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
+                @Sprint.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
+                @Sprint.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
+                @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @OpenMap.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenMap;
+                @OpenMap.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenMap;
+                @OpenMap.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenMap;
+                @OpenDiary.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenDiary;
+                @OpenDiary.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenDiary;
+                @OpenDiary.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenDiary;
+                @OpenInventory.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenInventory;
+                @OpenInventory.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenInventory;
+                @OpenInventory.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenInventory;
+                @Aim.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
+                @Aim.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
+                @Aim.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
+                @Shoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                @Shoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                @Shoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                @Reload.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
+                @Reload.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
+                @Reload.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
             }
-            m_Wrapper.m_GameplayActionsCallbackInterface = instance;
+            m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+                @Sprint.started += instance.OnSprint;
+                @Sprint.performed += instance.OnSprint;
+                @Sprint.canceled += instance.OnSprint;
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
-                @Shoot.started += instance.OnShoot;
-                @Shoot.performed += instance.OnShoot;
-                @Shoot.canceled += instance.OnShoot;
-                @Reload.started += instance.OnReload;
-                @Reload.performed += instance.OnReload;
-                @Reload.canceled += instance.OnReload;
                 @OpenMap.started += instance.OnOpenMap;
                 @OpenMap.performed += instance.OnOpenMap;
                 @OpenMap.canceled += instance.OnOpenMap;
@@ -473,10 +522,19 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                 @OpenInventory.started += instance.OnOpenInventory;
                 @OpenInventory.performed += instance.OnOpenInventory;
                 @OpenInventory.canceled += instance.OnOpenInventory;
+                @Aim.started += instance.OnAim;
+                @Aim.performed += instance.OnAim;
+                @Aim.canceled += instance.OnAim;
+                @Shoot.started += instance.OnShoot;
+                @Shoot.performed += instance.OnShoot;
+                @Shoot.canceled += instance.OnShoot;
+                @Reload.started += instance.OnReload;
+                @Reload.performed += instance.OnReload;
+                @Reload.canceled += instance.OnReload;
             }
         }
     }
-    public GameplayActions @Gameplay => new GameplayActions(this);
+    public PlayerActions @Player => new PlayerActions(this);
 
     // UI
     private readonly InputActionMap m_UI;
@@ -528,15 +586,17 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_GamepadSchemeIndex];
         }
     }
-    public interface IGameplayActions
+    public interface IPlayerActions
     {
-        void OnMovement(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
+        void OnSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnShoot(InputAction.CallbackContext context);
-        void OnReload(InputAction.CallbackContext context);
         void OnOpenMap(InputAction.CallbackContext context);
         void OnOpenDiary(InputAction.CallbackContext context);
         void OnOpenInventory(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
