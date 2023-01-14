@@ -2,24 +2,22 @@ using System;
 
 public class Apple : IInventoryItem
 {
-    public Type type => GetType();
+    public IInventoryItemInfo info { get; }
 
-    public bool isEquipped { get; set; }
+    public IInventoryItemState state { get; }
 
-    public int maxItemsInInventorySlot { get; }
+public Type type => GetType();
 
-    public int amount { get; set; }
-
-    public Apple(int maxItemsInSlotOfInventory)
+    public Apple(IInventoryItemInfo info)
     {
-        maxItemsInInventorySlot = maxItemsInSlotOfInventory;
+        this.info = info;
+        state = new InventoryItemState();
     }
 
     public IInventoryItem Clone()
     {
-        return new Apple(maxItemsInInventorySlot)
-        {
-            amount = this.amount
-        };
+        var clonnedApple = new Apple(info);
+        clonnedApple.state.amount = state.amount;
+        return clonnedApple;
     }
 }

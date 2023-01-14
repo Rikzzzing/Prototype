@@ -6,6 +6,7 @@ using UnityEngine;
 public class InventoryTester : MonoBehaviour
 {
     private IInventory _inventory;
+    private IInventoryItemInfo info;
 
     private void Awake()
     {
@@ -31,8 +32,8 @@ public class InventoryTester : MonoBehaviour
     private void AddRandomApples()
     {
         var randomCount = Random.Range(0, 5);
-        var apple = new Apple(5);
-        apple.amount= randomCount;
+        var apple = new Apple(info);
+        apple.state.amount = randomCount;
         _inventory.TryToAdd(this, apple);
     }
 

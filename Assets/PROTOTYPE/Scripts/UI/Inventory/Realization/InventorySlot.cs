@@ -1,13 +1,10 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class InventorySlot : IInventorySlot
 {
     public bool isFull => amountItemsInSlot == capacityOfSlot;
     public bool isEmpty => itemInSlot == null;
-    public int amountItemsInSlot => isEmpty ? 0 : itemInSlot.amount;
+    public int amountItemsInSlot => isEmpty ? 0 : itemInSlot.state.amount;
     public int capacityOfSlot { get; private set; }
 
     public IInventoryItem itemInSlot { get; private set; }
@@ -21,7 +18,7 @@ public class InventorySlot : IInventorySlot
         }
 
         itemInSlot = item;
-        capacityOfSlot = itemInSlot.maxItemsInInventorySlot;
+        capacityOfSlot = itemInSlot.info.maxItemsInInventorySlot;
     }
 
     public void Clear()
@@ -31,7 +28,7 @@ public class InventorySlot : IInventorySlot
             return;
         }
 
-        itemInSlot.amount = 0;
+        itemInSlot.state.amount = 0;
         itemInSlot = null;
     }
 
