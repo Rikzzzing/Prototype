@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7132d15fba9a5940be2c25e5d4fc90a, type: 3}
-  m_Name: InventoryItemInfo
+  m_Name: InventoryItemInfoApple
   m_EditorClassIdentifier: 
-  _id: 
-  _title: 
-  _dicription: 
-  _maxItemsInInventorySlot: 0
-  _spriteIcon: {fileID: 0}
+  _id: apple
+  _title: Apple
+  _dicription: Big green apple
+  _maxItemsInInventorySlot: 5
+  _spriteIcon: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}

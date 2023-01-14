@@ -2,7 +2,7 @@ using System;
 
 public class InventorySlot : IInventorySlot
 {
-    public bool isFull => amountItemsInSlot == capacityOfSlot;
+    public bool isFull => !isEmpty && amountItemsInSlot == capacityOfSlot;
     public bool isEmpty => itemInSlot == null;
     public int amountItemsInSlot => isEmpty ? 0 : itemInSlot.state.amount;
     public int capacityOfSlot { get; private set; }
@@ -23,7 +23,7 @@ public class InventorySlot : IInventorySlot
 
     public void Clear()
     {
-        if (!isEmpty)
+        if (isEmpty)
         {
             return;
         }
@@ -31,5 +31,4 @@ public class InventorySlot : IInventorySlot
         itemInSlot.state.amount = 0;
         itemInSlot = null;
     }
-
 }

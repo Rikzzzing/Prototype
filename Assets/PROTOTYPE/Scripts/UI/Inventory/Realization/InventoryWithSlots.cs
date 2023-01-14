@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class InventoryWithSlots : IInventory
 {
@@ -105,13 +104,12 @@ public class InventoryWithSlots : IInventory
         return false;
     }
 
-    private bool TryToAddToSlot(object sender, IInventorySlot slot, IInventoryItem item)
+    public bool TryToAddToSlot(object sender, IInventorySlot slot, IInventoryItem item)
     {
         var fits = slot.amountItemsInSlot + item.state.amount <= item.info.maxItemsInInventorySlot;
         var amountToAdd = fits ? item.state.amount : item.info.maxItemsInInventorySlot - slot.amountItemsInSlot;
         var amountLeft = item.state.amount - amountToAdd;
         var clonedItem = item.Clone();
-
         clonedItem.state.amount = amountToAdd;
 
         if (slot.isEmpty)
@@ -153,6 +151,11 @@ public class InventoryWithSlots : IInventory
             return;
         }
 
+        if (fromSlot == toSlot)
+        {
+            return;
+        }
+
         var slotCapacity = fromSlot.capacityOfSlot;
         var fits = fromSlot.amountItemsInSlot + toSlot.amountItemsInSlot <= slotCapacity;
         var amountToAdd = fits ? fromSlot.amountItemsInSlot : slotCapacity - toSlot.amountItemsInSlot;
@@ -166,6 +169,7 @@ public class InventoryWithSlots : IInventory
         }
 
         toSlot.itemInSlot.state.amount += amountToAdd;
+
         if (fits)
         {
             fromSlot.Clear();
@@ -178,14 +182,13 @@ public class InventoryWithSlots : IInventory
         OnInventoryStateChangedEvent?.Invoke(sender);
     }
 
-    public void TryToRemove(object sender, Type itemType, int amount = 1)
+    public bool TryToRemove(object sender, Type itemType, int amount = 1)
     {
         var slotsWithItem = GetAllSlots(itemType);
 
         if (slotsWithItem.Length == 0)
         {
-            return;
-            //return false;
+            return false;
         }
 
         var amountToRemove = amount;
@@ -220,7 +223,7 @@ public class InventoryWithSlots : IInventory
             OnInventoryStateChangedEvent?.Invoke(sender);
         }
 
-        //return TryToRemove(sender, itemType);
+        return true;
     }
 
     public IInventorySlot[] GetAllSlots(Type itemType)
