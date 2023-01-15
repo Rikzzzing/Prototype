@@ -65,7 +65,7 @@ public class UIInventoryTester
         var allSlots = inventory.GetAllSlots();
         var allSlotsCount = allSlots.Length;
 
-        for (int i = 0; i< allSlotsCount; i++)
+        for (int i = 0; i < allSlotsCount; i++)
         {
             var slot = allSlots[i];
             var uiSlot = _uiSlots[i];
