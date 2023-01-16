@@ -55,33 +55,6 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""OpenMap"",
-                    ""type"": ""Button"",
-                    ""id"": ""2a448098-eae8-40fd-99e4-4e4f83320f34"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""OpenDiary"",
-                    ""type"": ""Button"",
-                    ""id"": ""47bf6b0e-8354-4da9-b885-8cba030977b2"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""OpenInventory"",
-                    ""type"": ""Button"",
-                    ""id"": ""115bb132-d3b4-4afb-8f22-6d5182fa6aba"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Aim"",
                     ""type"": ""Button"",
                     ""id"": ""2f2ea10b-d991-4ad8-b529-3006fa21cee2"",
@@ -233,39 +206,6 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""559d6e05-a549-4f2c-808d-7dd0793b36d0"",
-                    ""path"": ""<Keyboard>/m"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse&Keyboard"",
-                    ""action"": ""OpenMap"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e02fa52c-0e11-4020-8243-00fb7db65b5c"",
-                    ""path"": ""<Keyboard>/j"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse&Keyboard"",
-                    ""action"": ""OpenDiary"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e0d3ce90-9670-4fd7-b3e7-a99a190801e9"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse&Keyboard"",
-                    ""action"": ""OpenInventory"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""01c69e4b-2383-4792-9daa-bcc599f37e06"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
@@ -305,6 +245,94 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Mouse&Keyboard"",
                     ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""OpenPopup"",
+            ""id"": ""77464f0f-361d-487b-8f84-cb6e01c4f391"",
+            ""actions"": [
+                {
+                    ""name"": ""OpenInventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""278fcf28-0461-466b-9edd-0b2d4d40cf98"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenDiary"",
+                    ""type"": ""Button"",
+                    ""id"": ""2e7c600b-2467-4881-a950-ad75f82047ba"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenMap"",
+                    ""type"": ""Button"",
+                    ""id"": ""799d488f-5e97-41d1-82aa-4ea107cad817"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenPauseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""afab2abf-bc5f-4de8-9ccb-7f74369a545d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""0a1cd293-e44c-4863-817b-86ef1998acbe"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse&Keyboard"",
+                    ""action"": ""OpenDiary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e417c0f0-a18c-4050-a7ac-b0e70bc0c566"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse&Keyboard"",
+                    ""action"": ""OpenInventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""60bebc54-f71a-4895-8838-342ecb6875fb"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse&Keyboard"",
+                    ""action"": ""OpenMap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""738772ac-a99d-465d-a0bf-7bed06cbff3e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse&Keyboard"",
+                    ""action"": ""OpenPauseMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -374,12 +402,15 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_OpenMap = m_Player.FindAction("OpenMap", throwIfNotFound: true);
-        m_Player_OpenDiary = m_Player.FindAction("OpenDiary", throwIfNotFound: true);
-        m_Player_OpenInventory = m_Player.FindAction("OpenInventory", throwIfNotFound: true);
         m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
         m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
         m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
+        // OpenPopup
+        m_OpenPopup = asset.FindActionMap("OpenPopup", throwIfNotFound: true);
+        m_OpenPopup_OpenInventory = m_OpenPopup.FindAction("OpenInventory", throwIfNotFound: true);
+        m_OpenPopup_OpenDiary = m_OpenPopup.FindAction("OpenDiary", throwIfNotFound: true);
+        m_OpenPopup_OpenMap = m_OpenPopup.FindAction("OpenMap", throwIfNotFound: true);
+        m_OpenPopup_OpenPauseMenu = m_OpenPopup.FindAction("OpenPauseMenu", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
@@ -445,9 +476,6 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_OpenMap;
-    private readonly InputAction m_Player_OpenDiary;
-    private readonly InputAction m_Player_OpenInventory;
     private readonly InputAction m_Player_Aim;
     private readonly InputAction m_Player_Shoot;
     private readonly InputAction m_Player_Reload;
@@ -458,9 +486,6 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @OpenMap => m_Wrapper.m_Player_OpenMap;
-        public InputAction @OpenDiary => m_Wrapper.m_Player_OpenDiary;
-        public InputAction @OpenInventory => m_Wrapper.m_Player_OpenInventory;
         public InputAction @Aim => m_Wrapper.m_Player_Aim;
         public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
         public InputAction @Reload => m_Wrapper.m_Player_Reload;
@@ -482,15 +507,6 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @OpenMap.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenMap;
-                @OpenMap.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenMap;
-                @OpenMap.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenMap;
-                @OpenDiary.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenDiary;
-                @OpenDiary.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenDiary;
-                @OpenDiary.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenDiary;
-                @OpenInventory.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenInventory;
-                @OpenInventory.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenInventory;
-                @OpenInventory.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenInventory;
                 @Aim.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
                 @Aim.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
                 @Aim.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
@@ -513,15 +529,6 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
-                @OpenMap.started += instance.OnOpenMap;
-                @OpenMap.performed += instance.OnOpenMap;
-                @OpenMap.canceled += instance.OnOpenMap;
-                @OpenDiary.started += instance.OnOpenDiary;
-                @OpenDiary.performed += instance.OnOpenDiary;
-                @OpenDiary.canceled += instance.OnOpenDiary;
-                @OpenInventory.started += instance.OnOpenInventory;
-                @OpenInventory.performed += instance.OnOpenInventory;
-                @OpenInventory.canceled += instance.OnOpenInventory;
                 @Aim.started += instance.OnAim;
                 @Aim.performed += instance.OnAim;
                 @Aim.canceled += instance.OnAim;
@@ -535,6 +542,63 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // OpenPopup
+    private readonly InputActionMap m_OpenPopup;
+    private IOpenPopupActions m_OpenPopupActionsCallbackInterface;
+    private readonly InputAction m_OpenPopup_OpenInventory;
+    private readonly InputAction m_OpenPopup_OpenDiary;
+    private readonly InputAction m_OpenPopup_OpenMap;
+    private readonly InputAction m_OpenPopup_OpenPauseMenu;
+    public struct OpenPopupActions
+    {
+        private @GameAction m_Wrapper;
+        public OpenPopupActions(@GameAction wrapper) { m_Wrapper = wrapper; }
+        public InputAction @OpenInventory => m_Wrapper.m_OpenPopup_OpenInventory;
+        public InputAction @OpenDiary => m_Wrapper.m_OpenPopup_OpenDiary;
+        public InputAction @OpenMap => m_Wrapper.m_OpenPopup_OpenMap;
+        public InputAction @OpenPauseMenu => m_Wrapper.m_OpenPopup_OpenPauseMenu;
+        public InputActionMap Get() { return m_Wrapper.m_OpenPopup; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(OpenPopupActions set) { return set.Get(); }
+        public void SetCallbacks(IOpenPopupActions instance)
+        {
+            if (m_Wrapper.m_OpenPopupActionsCallbackInterface != null)
+            {
+                @OpenInventory.started -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenInventory;
+                @OpenInventory.performed -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenInventory;
+                @OpenInventory.canceled -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenInventory;
+                @OpenDiary.started -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenDiary;
+                @OpenDiary.performed -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenDiary;
+                @OpenDiary.canceled -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenDiary;
+                @OpenMap.started -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenMap;
+                @OpenMap.performed -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenMap;
+                @OpenMap.canceled -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenMap;
+                @OpenPauseMenu.started -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenPauseMenu;
+                @OpenPauseMenu.performed -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenPauseMenu;
+                @OpenPauseMenu.canceled -= m_Wrapper.m_OpenPopupActionsCallbackInterface.OnOpenPauseMenu;
+            }
+            m_Wrapper.m_OpenPopupActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @OpenInventory.started += instance.OnOpenInventory;
+                @OpenInventory.performed += instance.OnOpenInventory;
+                @OpenInventory.canceled += instance.OnOpenInventory;
+                @OpenDiary.started += instance.OnOpenDiary;
+                @OpenDiary.performed += instance.OnOpenDiary;
+                @OpenDiary.canceled += instance.OnOpenDiary;
+                @OpenMap.started += instance.OnOpenMap;
+                @OpenMap.performed += instance.OnOpenMap;
+                @OpenMap.canceled += instance.OnOpenMap;
+                @OpenPauseMenu.started += instance.OnOpenPauseMenu;
+                @OpenPauseMenu.performed += instance.OnOpenPauseMenu;
+                @OpenPauseMenu.canceled += instance.OnOpenPauseMenu;
+            }
+        }
+    }
+    public OpenPopupActions @OpenPopup => new OpenPopupActions(this);
 
     // UI
     private readonly InputActionMap m_UI;
@@ -591,12 +655,16 @@ public partial class @GameAction : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnOpenMap(InputAction.CallbackContext context);
-        void OnOpenDiary(InputAction.CallbackContext context);
-        void OnOpenInventory(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
+    }
+    public interface IOpenPopupActions
+    {
+        void OnOpenInventory(InputAction.CallbackContext context);
+        void OnOpenDiary(InputAction.CallbackContext context);
+        void OnOpenMap(InputAction.CallbackContext context);
+        void OnOpenPauseMenu(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

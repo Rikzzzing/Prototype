@@ -25,31 +25,27 @@ public class InputPopup : MonoBehaviour
     private void OnEnable()
     {
         _gameAction.Enable();
-        _gameAction.Player.OpenInventory.performed += OnOpenInventoryPerfermed;
-        _gameAction.Player.OpenMap.performed += OnOpenMapPerfermed;
-        _gameAction.Player.OpenDiary.performed += OnOpenDiaryPerfermed;
+
+        _gameAction.OpenPopup.OpenInventory.performed += OnOpenPopup;
+        _gameAction.OpenPopup.OpenMap.performed += OnOpenPopup;
+        _gameAction.OpenPopup.OpenDiary.performed += OnOpenPopup;
+        _gameAction.OpenPopup.OpenPauseMenu.performed += OnOpenPopup;
+
     }
 
-    private void OnOpenInventoryPerfermed(InputAction.CallbackContext obj)
+    private void OnOpenPopup(InputAction.CallbackContext obj)
     {
-        _openPopup.OpenInventory();
+        _openPopup.OpenPopup(obj.control.name);
     }
 
-    private void OnOpenMapPerfermed(InputAction.CallbackContext obj)
-    {
-        _openPopup.OpenMap();
-    }
-
-    private void OnOpenDiaryPerfermed(InputAction.CallbackContext obj)
-    {
-        _openPopup.OpenDiary();
-    }
 
     private void OnDisable()
     {
-        _gameAction.Player.OpenInventory.performed -= OnOpenInventoryPerfermed;
-        _gameAction.Player.OpenMap.performed -= OnOpenMapPerfermed;
-        _gameAction.Player.OpenDiary.performed -= OnOpenDiaryPerfermed;
+        _gameAction.OpenPopup.OpenInventory.performed -= OnOpenPopup;
+        _gameAction.OpenPopup.OpenMap.performed -= OnOpenPopup;
+        _gameAction.OpenPopup.OpenDiary.performed -= OnOpenPopup;
+        _gameAction.OpenPopup.OpenPauseMenu.performed -= OnOpenPopup;
+
         _gameAction.Disable();
     }
 }

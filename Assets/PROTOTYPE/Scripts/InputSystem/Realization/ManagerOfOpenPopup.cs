@@ -1,74 +1,53 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class ManagerOfOpenPopup : MonoBehaviour, IOpenPopup
 {
-    [SerializeField] private UIDocument _inventoryDocument;
-    [SerializeField] private UIDocument _diaryDocument;
-    [SerializeField] private UIDocument _mapDocument;
+    [SerializeField] private UIDocument _popupDocument;
 
-    private VisualElement _inventoryContainer;
-    private VisualElement _diaryContainer;
-    private VisualElement _mapContainer;
-
-    private bool _isInventoryOpen;
-    private bool _isDiaryOpen;
-    private bool _isMapOpen;
+    private VisualElement _container;
+    private Dictionary<string, VisualElement> _containers = new Dictionary<string, VisualElement>();
+    private bool _isPopupOpen;
+    private string _prevKey;
 
     private void Awake()
     {
-        var inventoryRootElement = _inventoryDocument.rootVisualElement;
-        var diaryRootElement = _diaryDocument.rootVisualElement;
-        var mapRootElement = _mapDocument.rootVisualElement;
+        var popupRootElement = _popupDocument.rootVisualElement;
 
-        _inventoryContainer = inventoryRootElement.Q<VisualElement>("Container");
-        _diaryContainer = diaryRootElement.Q<VisualElement>("Container");
-        _mapContainer = mapRootElement.Q<VisualElement>("Container");
+        _containers.Add("escape", popupRootElement.Q<VisualElement>("PauseMenuContainer"));
+        _containers.Add("i", popupRootElement.Q<VisualElement>("InventoryContainer"));
+        _containers.Add("j", popupRootElement.Q<VisualElement>("DiaryContainer"));
+        _containers.Add("m", popupRootElement.Q<VisualElement>("MapContainer"));
 
-        _isInventoryOpen = false;
-        _isDiaryOpen = false;
-        _isMapOpen = false;
+        _isPopupOpen = false;
     }
 
-    public void OpenInventory()
+    public void OpenPopup(string key)
     {
-        if (!_isInventoryOpen)
+        if (!_isPopupOpen)
         {
-            _inventoryContainer.style.display = DisplayStyle.Flex;
+            _prevKey = key;
+            _container = _containers[key];
+            _container.style.display = DisplayStyle.Flex;
+            StopGame();
+            _isPopupOpen = true;
         }
-        else
+        else if(key == _prevKey)
         {
-            _inventoryContainer.style.display = DisplayStyle.None;
+            _container.style.display = DisplayStyle.None;
+            ContinueGame();
+            _isPopupOpen = false;
         }
-
-        _isInventoryOpen = !_isInventoryOpen;
     }
 
-    public void OpenDiary()
+    private void StopGame()
     {
-        if (!_isDiaryOpen)
-        {
-            _diaryContainer.style.display = DisplayStyle.Flex;
-        }
-        else
-        {
-            _diaryContainer.style.display = DisplayStyle.None;
-        }
-
-        _isDiaryOpen = !_isDiaryOpen;
+        Time.timeScale = 0f;
     }
 
-    public void OpenMap()
+    private void ContinueGame()
     {
-        if (!_isMapOpen)
-        {
-            _mapContainer.style.display = DisplayStyle.Flex;
-        }
-        else
-        {
-            _mapContainer.style.display = DisplayStyle.None;
-        }
-
-        _isMapOpen = !_isMapOpen;
+        Time.timeScale = 1f;
     }
 }
