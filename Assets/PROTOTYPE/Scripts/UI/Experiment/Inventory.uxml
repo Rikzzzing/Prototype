@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/PROTOTYPE/Scripts/UI/Experiment/InventoryStyles.uss?fileID=7433441132597879392&amp;guid=6b62626d2cccb1a4bbf9b5b13c99bb2d&amp;type=3#InventoryStyles" />
-    <ui:VisualElement name="Container" class="inventory-container">
+    <ui:VisualElement name="Container" class="inventory-container" style="display: none;">
         <ui:VisualElement name="Inventory" class="inventory-inventory-grid">
             <ui:Label name="Header" text="Inventory" class="inventory-header" />
             <ui:VisualElement name="SlotContainer" class="inventory-slot-container">

@@ -1,23 +1,30 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
+using System.Linq;
 
 public class InventoryUIController : MonoBehaviour
 {
     public List<InventorySlotEXP> InventoryItems = new List<InventorySlotEXP>();
-    private VisualElement _root;
-    private VisualElement _slotContainer;
     
     private void Awake()
     {
-        _root = GetComponent<UIDocument>().rootVisualElement;
-        _slotContainer = _root.Q<VisualElement>("SlotContainer");
+        GameController.OnInventoryChanged += GameController_OnInventoryChanged;
+    }
 
-        for (int i = 0; i < 24; i++)
+    private void GameController_OnInventoryChanged(string[] itemGuid, InventoryChangeType change)
+    {
+        foreach (string item in itemGuid)
         {
-            InventorySlotEXP item = new InventorySlotEXP();
-            InventoryItems.Add(item);
-            _slotContainer.Add(item);
+            if (change == InventoryChangeType.Pickup)
+            {
+                var emptySlot = InventoryItems.FirstOrDefault(x => x.ItemGuid.Equals(""));
+
+                if (emptySlot != null)
+                {
+                    emptySlot.HoldItem(GameController.GetItemByGuid(item));
+                }
+            }
         }
     }
 }

@@ -1,4 +1,3 @@
-using UnityEngine.Scripting;
 using UnityEngine.UIElements;
 
 public class InventorySlotEXP : VisualElement
@@ -13,11 +12,14 @@ public class InventorySlotEXP : VisualElement
         Icon.AddToClassList("inventory-slot-icon");
         AddToClassList("inventory-slot");
     }
-
-    #region UXML
-    [Preserve]
-    public new class UxmlFactory : UxmlFactory<InventorySlotEXP, UxmlTraits> { }
-    [Preserve]
-    public new class UxmlTraits : VisualElement.UxmlTraits { }
-    #endregion
+    public void HoldItem(ItemDetails item)
+    {
+        Icon.image = item.Icon.texture;
+        ItemGuid = item.GUID;
+    }
+    public void DropItem()
+    {
+        ItemGuid = "";
+        Icon.image = null;
+    }
 }
