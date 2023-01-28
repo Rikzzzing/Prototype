@@ -24,7 +24,7 @@
                     <ui:VisualElement name="Item" class="inventory-slot-icon" />
                 </ui:VisualElement>
                 <ui:VisualElement name="Slot" class="inventory-slot">
-                    <ui:VisualElement name="Item" class="inventory-slot-icon" />
+                    <ui:VisualElement name="Item" class="inventory-slot-icon" style="background-image: url(&apos;project://database/Assets/PROTOTYPE/Images/UI/potion.png?fileID=2800000&amp;guid=a936cd486d30cb444a92b7330963ab1c&amp;type=3#potion&apos;);" />
                 </ui:VisualElement>
                 <ui:VisualElement name="Slot" class="inventory-slot">
                     <ui:VisualElement name="Item" class="inventory-slot-icon" />
@@ -45,7 +45,7 @@
                     <ui:VisualElement name="Item" class="inventory-slot-icon" />
                 </ui:VisualElement>
                 <ui:VisualElement name="Slot" class="inventory-slot">
-                    <ui:VisualElement name="Item" class="inventory-slot-icon" />
+                    <ui:VisualElement name="Item" class="inventory-slot-icon" style="background-image: url(&apos;project://database/Assets/PROTOTYPE/Images/UI/poison.png?fileID=2800000&amp;guid=1a7541eb4fd26ea41b09eb6d4d4ea64e&amp;type=3#poison&apos;);" />
                 </ui:VisualElement>
                 <ui:VisualElement name="Slot" class="inventory-slot">
                     <ui:VisualElement name="Item" class="inventory-slot-icon" />

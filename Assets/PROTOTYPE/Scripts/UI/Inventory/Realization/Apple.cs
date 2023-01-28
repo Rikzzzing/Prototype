@@ -6,7 +6,7 @@ public class Apple : IInventoryItem
 
     public IInventoryItemState state { get; }
 
-public Type type => GetType();
+    public Type type => GetType();
 
     public Apple(IInventoryItemInfo info)
     {
